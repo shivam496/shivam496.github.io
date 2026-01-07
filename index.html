@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shivam Singh - Senior Software Engineer at Salesforce. Former Microsoft Engineer. Mobile App Developer & Creative Technologist building beautiful, functional apps.">
+    <meta name="keywords" content="Shivam Singh, Salesforce, Microsoft, Mobile Developer, React Native, iOS, Android, Swift, Kotlin, Portfolio">
+    <meta name="author" content="Shivam Singh">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Shivam Singh | Senior Software Engineer">
+    <meta property="og:description" content="Senior MTS at Salesforce. Former Microsoft Engineer. Building beautiful, functional apps that solve real problems.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shivam496.github.io">
+    <meta property="og:image" content="https://shivam496.github.io/assets/images/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Shivam Singh | Senior Software Engineer">
+    <meta name="twitter:description" content="Senior MTS at Salesforce. Former Microsoft Engineer. Building beautiful, functional apps.">
+    <meta name="twitter:image" content="https://shivam496.github.io/assets/images/og-image.png">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://shivam496.github.io">
+    
+    <title>Shivam Singh | Senior Software Engineer</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+    
+    <!-- Structured Data (JSON-LD) for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Shivam Singh",
+        "url": "https://shivam496.github.io",
+        "image": "https://shivam496.github.io/assets/images/profile.jpg",
+        "jobTitle": "Senior Member of Technical Staff",
+        "worksFor": {
+            "@type": "Organization",
+            "name": "Salesforce"
+        },
+        "alumniOf": [
+            {
+                "@type": "CollegeOrUniversity",
+                "name": "International Institute of Information Technology, Hyderabad"
+            },
+            {
+                "@type": "CollegeOrUniversity",
+                "name": "University of Allahabad"
+            }
+        ],
+        "sameAs": [
+            "https://github.com/shivam496",
+            "https://linkedin.com/in/i-am-shivam"
+        ],
+        "knowsAbout": ["Mobile Development", "iOS", "Android", "React Native", "Swift", "Kotlin", "Software Engineering"]
+    }
+    </script>
+</head>
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#about" class="skip-link">Skip to main content</a>
+    
+    <!-- Cursor glow effect -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+    
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-bracket">{</span>
+                <span class="logo-text">SS</span>
+                <span class="logo-bracket">}</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#contact" class="nav-link nav-link--cta">Let's Talk</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-menu-links">
+            <li><a href="#about" class="mobile-link">About</a></li>
+            <li><a href="#experience" class="mobile-link">Experience</a></li>
+            <li><a href="#projects" class="mobile-link">Projects</a></li>
+            <li><a href="#skills" class="mobile-link">Skills</a></li>
+            <li><a href="#contact" class="mobile-link">Let's Talk</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <div class="hero-gradient"></div>
+            <div class="hero-grid"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge reveal">
+                <span class="badge-dot"></span>
+                <span>Senior MTS @ Salesforce</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="reveal reveal--delay-1">Hi, I'm</span>
+                <span class="hero-name reveal reveal--delay-2">Shivam Singh</span>
+            </h1>
+            <p class="hero-subtitle reveal reveal--delay-3">
+                I build <span class="highlight">mobile experiences</span> at scale.
+                <br>
+                Former <span class="highlight">Microsoft</span> engineer. <span class="highlight">Global Hackathon Winner</span>. Patent holder.
+            </p>
+            <div class="hero-cta reveal reveal--delay-4">
+                <a href="#experience" class="btn btn--primary">
+                    <span>View My Work</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                    </svg>
+                </a>
+                <a href="assets/Shivam_Singh_Resume.pdf" download class="btn btn--ghost">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                        <polyline points="7 10 12 15 17 10"/>
+                        <line x1="12" y1="15" x2="12" y2="3"/>
+                    </svg>
+                    <span>Resume</span>
+                </a>
+                <a href="#contact" class="btn btn--ghost">
+                    <span>Get in Touch</span>
+                </a>
+            </div>
+            <div class="hero-stats reveal reveal--delay-5">
+                <div class="stat">
+                    <span class="stat-number" data-count="5">0</span><span class="stat-suffix">+</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number" data-count="10">0</span><span class="stat-suffix">M+</span>
+                    <span class="stat-label">Users Impacted</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number" data-count="1">0</span>
+                    <span class="stat-label">Patent Approved</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span>Scroll to explore</span>
+            <div class="scroll-indicator">
+                <div class="scroll-dot"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag reveal">01 / About</span>
+                <h2 class="section-title reveal reveal--delay-1">
+                    Engineer who <span class="gradient-text">ships at scale</span>
+                </h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-content reveal reveal--delay-2">
+                    <p class="about-lead">
+                        I'm a Senior Software Engineer at Salesforce, previously at Microsoft for 5+ years, passionate about building mobile applications that impact millions of users.
+                    </p>
+                    <p>
+                        At Microsoft, I led the rebranding of Office.com (now Microsoft 365 Copilot) serving 10M+ monthly users, and reduced the desktop app load time from 75 seconds to under 10 seconds. I've worked across React Native, Swift, Kotlin, and C++ to build performant, cross-platform experiences.
+                    </p>
+                    <p>
+                        I'm also a <strong>Grand Winner of Microsoft Global Hackathon 2023</strong>, where I demoed our solution directly to Satya Nadella. Outside of work, I build personal apps and explore new technologies — always learning, always shipping.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <span class="highlight-icon">🏆</span>
+                            <div>
+                                <strong>Global Hackathon Winner</strong>
+                                <span>Microsoft 2023</span>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-icon">📜</span>
+                            <div>
+                                <strong>Patent Holder</strong>
+                                <span>UI Templatization</span>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-icon">🎯</span>
+                            <div>
+                                <strong>ACM ICPC Finalist</strong>
+                                <span>Rank 22 Asia Kolkata</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image reveal reveal--delay-3">
+                    <div class="image-frame">
+                        <!-- TODO: Replace with your actual photo -->
+                        <!-- <img src="assets/images/profile.jpg" alt="Shivam Singh" class="profile-image" /> -->
+                        <div class="image-placeholder">
+                            <span class="placeholder-emoji">👨‍💻</span>
+                            <span class="placeholder-text">Add profile.jpg</span>
+                        </div>
+                        <div class="image-decoration"></div>
+                    </div>
+                    <div class="floating-card floating-card--1">
+                        <span>🎓</span>
+                        <span>M.Tech IIIT-H</span>
+                    </div>
+                    <div class="floating-card floating-card--2">
+                        <span>📱</span>
+                        <span>iOS & Android</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience section" id="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag reveal">02 / Experience</span>
+                <h2 class="section-title reveal reveal--delay-1">
+                    Where I've <span class="gradient-text">worked</span>
+                </h2>
+            </div>
+            
+            <div class="experience-timeline">
+                <!-- Salesforce -->
+                <div class="exp-card reveal">
+                    <div class="exp-header">
+                        <div class="exp-company">
+                            <div class="company-logo company-logo--salesforce">
+                                <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
+                                    <path d="M10.006 5.415a4.195 4.195 0 0 1 3.045-1.306c1.56 0 2.954.9 3.69 2.205.63-.3 1.35-.45 2.1-.45 2.85 0 5.159 2.34 5.159 5.22s-2.31 5.22-5.16 5.22c-.45 0-.884-.06-1.305-.165a3.975 3.975 0 0 1-3.63 2.385 3.975 3.975 0 0 1-2.58-.96 4.66 4.66 0 0 1-4.065 2.415c-2.58 0-4.665-2.1-4.665-4.695 0-.975.285-1.875.795-2.625A4.178 4.178 0 0 1 .015 9.63c0-2.31 1.875-4.185 4.185-4.185 1.11 0 2.115.435 2.865 1.14a4.185 4.185 0 0 1 2.94-1.17z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3>Salesforce</h3>
+                                <span class="exp-location">Hyderabad, India</span>
+                            </div>
+                        </div>
+                        <div class="exp-meta">
+                            <span class="exp-role">Senior Member of Technical Staff</span>
+                            <span class="exp-date">Apr 2025 — Present</span>
+                        </div>
+                    </div>
+                    <div class="exp-content">
+                        <h4>Loyalty Mobile App (iOS & Android)</h4>
+                        <ul class="exp-list">
+                            <li>Revived and modernized the Loyalty Mobile App after a 2-year halt as the <strong>sole owner</strong> of both iOS and Android platforms</li>
+                            <li>Showcased to clients and <strong>appreciated by CTO with org-wide recognition</strong></li>
+                            <li>Leading high-visibility integrations: <strong>Apple Wallet, Google Wallet, Partner Linking</strong></li>
+                            <li>Authored setup and customization documentation, improved UI/UX and performance</li>
+                        </ul>
+                        <div class="exp-tech">
+                            <span>Swift</span>
+                            <span>Kotlin</span>
+                            <span>iOS</span>
+                            <span>Android</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Microsoft -->
+                <div class="exp-card reveal reveal--delay-1">
+                    <div class="exp-header">
+                        <div class="exp-company">
+                            <div class="company-logo company-logo--microsoft">
+                                <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                                    <path d="M0 0h11.5v11.5H0V0zm12.5 0H24v11.5H12.5V0zM0 12.5h11.5V24H0V12.5zm12.5 0H24V24H12.5V12.5z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3>Microsoft Corporation</h3>
+                                <span class="exp-location">Hyderabad, India</span>
+                            </div>
+                        </div>
+                        <div class="exp-meta">
+                            <span class="exp-role">Software Engineer II</span>
+                            <span class="exp-date">Jan 2020 — Apr 2025</span>
+                        </div>
+                    </div>
+                    <div class="exp-content">
+                        <h4>Office.com (Microsoft 365 Copilot)</h4>
+                        <ul class="exp-list">
+                            <li>Led the <strong>complete rebranding</strong> of the Office app serving <strong>10M+ monthly active users</strong></li>
+                            <li>Reduced desktop app load time (p95) from <strong>75s to under 10s</strong></li>
+                            <li>Achieved <strong>100% warm boot reliability</strong> and seamless auto-update functionality</li>
+                        </ul>
+                        <h4 style="margin-top: 1.5rem;">Kaizala, Uniti, Unnati & POCs</h4>
+                        <ul class="exp-list">
+                            <li>Led development of Action Cards, Action Designer, Reporting, and Webhooks across platforms</li>
+                            <li>Built core features using <strong>React Native</strong> for iOS & Android: Authentication, Feedback, Settings</li>
+                            <li>Optimized performance with <strong>C++</strong> in critical modules for low-latency communication</li>
+                            <li>Managed full release lifecycle including integration, testing, and post-launch support</li>
+                        </ul>
+                        <div class="exp-tech">
+                            <span>React Native</span>
+                            <span>TypeScript</span>
+                            <span>C++</span>
+                            <span>Azure</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education -->
+            <div class="education-section">
+                <h3 class="subsection-title reveal">
+                    <span>🎓</span> Education
+                </h3>
+                <div class="education-grid">
+                    <div class="edu-card reveal">
+                        <div class="edu-degree">M.Tech in Computer Science</div>
+                        <div class="edu-school">International Institute of Information Technology</div>
+                        <div class="edu-location">Hyderabad, India</div>
+                        <div class="edu-year">2018 — 2020</div>
+                        <div class="edu-honors">
+                            <span>Dean's List</span>
+                            <span>Teaching Assistant</span>
+                        </div>
+                    </div>
+                    <div class="edu-card reveal reveal--delay-1">
+                        <div class="edu-degree">B.Tech in Computer Science & Engineering</div>
+                        <div class="edu-school">University of Allahabad</div>
+                        <div class="edu-location">Prayagraj, India</div>
+                        <div class="edu-year">2014 — 2018</div>
+                        <div class="edu-honors">
+                            <span>ACM ICPC Finalist</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects section" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag reveal">03 / Projects</span>
+                <h2 class="section-title reveal reveal--delay-1">
+                    Things I've <span class="gradient-text">built</span>
+                </h2>
+                <p class="section-desc reveal reveal--delay-2">
+                    From hackathon-winning solutions to personal apps
+                </p>
+            </div>
+            
+            <!-- Featured Projects -->
+            <div class="projects-grid">
+                <!-- Hackathon Winner Project -->
+                <article class="project-card project-card--featured project-card--winner reveal">
+                    <div class="project-badge">
+                        <span>🏆</span> Grand Winner — Microsoft Global Hackathon 2023
+                    </div>
+                    <div class="project-image">
+                        <div class="project-mockup">
+                            <div class="mockup-screen">
+                                <div class="mockup-header">
+                                    <span class="mockup-dot"></span>
+                                    <span class="mockup-dot"></span>
+                                    <span class="mockup-dot"></span>
+                                </div>
+                                <div class="mockup-content mockup-content--hackathon">
+                                    <div class="mockup-icon">🌅</div>
+                                    <div class="mockup-title">Digital Dawn</div>
+                                    <div class="mockup-flow">
+                                        <div class="flow-item">📷</div>
+                                        <div class="flow-arrow">→</div>
+                                        <div class="flow-item">🤖</div>
+                                        <div class="flow-arrow">→</div>
+                                        <div class="flow-item">📄</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-status project-status--winner">
+                                <span class="status-dot"></span>
+                                Demoed to Satya Nadella
+                            </span>
+                            <span class="project-year">2023</span>
+                        </div>
+                        <h3 class="project-title">Democratizing the Digital Dawn</h3>
+                        <p class="project-tagline">AI-Powered Pamphlet Generator</p>
+                        <p class="project-desc">
+                            Full-stack mobile app that automates advertising pamphlet creation from image and audio inputs, enabling sellers to publish directly to marketplace. <strong>Reduced pamphlet creation time and cost by 99%.</strong>
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Microsoft AI</span>
+                            <span class="tech-tag">OneDrive</span>
+                            <span class="tech-tag">Excel</span>
+                            <span class="tech-tag">Designer</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- CodeCraft -->
+                <article class="project-card reveal">
+                    <div class="project-image">
+                        <div class="project-mockup">
+                            <div class="mockup-screen">
+                                <div class="mockup-header">
+                                    <span class="mockup-dot"></span>
+                                    <span class="mockup-dot"></span>
+                                    <span class="mockup-dot"></span>
+                                </div>
+                                <div class="mockup-content mockup-content--codecraft">
+                                    <div class="mockup-icon">⚡</div>
+                                    <div class="mockup-title">CodeCraft</div>
+                                    <div class="mockup-code">
+                                        <span>idea → design → app</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-status project-status--live">
+                                <span class="status-dot"></span>
+                                Completed
+                            </span>
+                            <span class="project-year">2023</span>
+                        </div>
+                        <h3 class="project-title">CodeCraft</h3>
+                        <p class="project-tagline">Idea to App Generator</p>
+                        <p class="project-desc">
+                            Full-stack web app where users input app ideas, which are expanded using LLMs into detailed designs and integrated into a complete web application.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Azure</span>
+                            <span class="tech-tag">LLMs</span>
+                            <span class="tech-tag">Compilers</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Personal Apps -->
+            <div class="personal-apps-section">
+                <h3 class="subsection-title reveal">
+                    <span>📱</span> Personal Apps
+                </h3>
+                <div class="projects-grid projects-grid--small">
+                    <!-- Kloset -->
+                    <article class="project-card reveal">
+                        <div class="project-image">
+                            <div class="project-mockup project-mockup--small">
+                                <div class="mockup-screen">
+                                    <div class="mockup-header">
+                                        <span class="mockup-dot"></span>
+                                        <span class="mockup-dot"></span>
+                                        <span class="mockup-dot"></span>
+                                    </div>
+                                    <div class="mockup-content mockup-content--kloset">
+                                        <div class="mockup-icon">👗</div>
+                                        <div class="mockup-title">Kloset</div>
+                                        <div class="mockup-grid">
+                                            <div class="mockup-item"></div>
+                                            <div class="mockup-item"></div>
+                                            <div class="mockup-item"></div>
+                                            <div class="mockup-item"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-status project-status--live">
+                                    <span class="status-dot"></span>
+                                    Live
+                                </span>
+                            </div>
+                            <h3 class="project-title">Kloset</h3>
+                            <p class="project-tagline">Your Digital Wardrobe</p>
+                            <p class="project-desc">
+                                Smart wardrobe management with AI-powered classification, weather-based suggestions, and virtual try-on.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React Native</span>
+                                <span class="tech-tag">Expo</span>
+                                <span class="tech-tag">AI/ML</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Ritual -->
+                    <article class="project-card reveal reveal--delay-1">
+                        <div class="project-image">
+                            <div class="project-mockup project-mockup--small">
+                                <div class="mockup-screen">
+                                    <div class="mockup-header">
+                                        <span class="mockup-dot"></span>
+                                        <span class="mockup-dot"></span>
+                                        <span class="mockup-dot"></span>
+                                    </div>
+                                    <div class="mockup-content mockup-content--ritual">
+                                        <div class="mockup-icon">✨</div>
+                                        <div class="mockup-title">Ritual</div>
+                                        <div class="mockup-list">
+                                            <div class="mockup-task"></div>
+                                            <div class="mockup-task"></div>
+                                            <div class="mockup-task"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-status project-status--live">
+                                    <span class="status-dot"></span>
+                                    Live
+                                </span>
+                            </div>
+                            <h3 class="project-title">Ritual</h3>
+                            <p class="project-tagline">Build Better Habits</p>
+                            <p class="project-desc">
+                                Mindful task tracking with contribution graphs, smart templates, notes, and focus timer.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React Native</span>
+                                <span class="tech-tag">Zustand</span>
+                                <span class="tech-tag">SQLite</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Upcoming Projects -->
+            <div class="upcoming-section">
+                <h3 class="subsection-title reveal">
+                    <span>🚧</span> Coming Soon
+                </h3>
+                <div class="upcoming-grid">
+                    <div class="upcoming-card reveal">
+                        <div class="upcoming-emoji">🧠</div>
+                        <h4>MoodBuddy</h4>
+                        <p>Track moods, journal thoughts, understand mental wellness patterns with smart prompts.</p>
+                        <span class="upcoming-status">In Development</span>
+                    </div>
+                    <div class="upcoming-card reveal reveal--delay-1">
+                        <div class="upcoming-emoji">🌍</div>
+                        <h4>Travis</h4>
+                        <p>Personal travel companion chatbot with personalized recommendations.</p>
+                        <span class="upcoming-status">Planning</span>
+                    </div>
+                    <div class="upcoming-card reveal reveal--delay-2">
+                        <div class="upcoming-emoji">🎮</div>
+                        <h4>Mobile Game</h4>
+                        <p>Exploring game development and ad monetization mechanics.</p>
+                        <span class="upcoming-status">Ideation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills section" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag reveal">04 / Skills</span>
+                <h2 class="section-title reveal reveal--delay-1">
+                    My <span class="gradient-text">toolkit</span>
+                </h2>
+            </div>
+            
+            <div class="skills-grid">
+                <div class="skill-category reveal">
+                    <div class="skill-icon">📱</div>
+                    <h3>Mobile Development</h3>
+                    <ul class="skill-list">
+                        <li>Swift & SwiftUI</li>
+                        <li>Kotlin & Jetpack Compose</li>
+                        <li>React Native</li>
+                        <li>Objective-C</li>
+                        <li>Expo</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category reveal reveal--delay-1">
+                    <div class="skill-icon">💻</div>
+                    <h3>Languages</h3>
+                    <ul class="skill-list">
+                        <li>C++</li>
+                        <li>TypeScript / JavaScript</li>
+                        <li>Python</li>
+                        <li>Java</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category reveal reveal--delay-2">
+                    <div class="skill-icon">⚡</div>
+                    <h3>Frontend & Backend</h3>
+                    <ul class="skill-list">
+                        <li>React</li>
+                        <li>Node.js</li>
+                        <li>REST APIs</li>
+                        <li>Firebase</li>
+                        <li>Microsoft Azure</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category reveal reveal--delay-3">
+                    <div class="skill-icon">🛠️</div>
+                    <h3>Tools & Platforms</h3>
+                    <ul class="skill-list">
+                        <li>Xcode & Android Studio</li>
+                        <li>Visual Studio / VS Code</li>
+                        <li>Git & GitHub</li>
+                        <li>Docker</li>
+                        <li>CI/CD (EAS, Azure)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="skills-extra reveal">
+                <h4>Also exploring:</h4>
+                <div class="extra-tags">
+                    <span>AI/ML Integration</span>
+                    <span>LLMs</span>
+                    <span>Web Security</span>
+                    <span>Game Development</span>
+                    <span>System Design</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="achievements section" id="achievements">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag reveal">05 / Recognition</span>
+                <h2 class="section-title reveal reveal--delay-1">
+                    Achievements & <span class="gradient-text">Awards</span>
+                </h2>
+            </div>
+            
+            <div class="achievements-grid">
+                <div class="achievement-card reveal">
+                    <div class="achievement-icon">🏆</div>
+                    <h3>Microsoft Global Hackathon 2023</h3>
+                    <p>Grand Prize Winner</p>
+                    <span class="achievement-detail">Demoed solution to Satya Nadella, CEO of Microsoft</span>
+                </div>
+                
+                <div class="achievement-card reveal reveal--delay-1">
+                    <div class="achievement-icon">📜</div>
+                    <h3>Patent Holder</h3>
+                    <p>Customized User Interface Templatization</p>
+                    <span class="achievement-detail">Approved patent at Microsoft</span>
+                </div>
+                
+                <div class="achievement-card reveal reveal--delay-2">
+                    <div class="achievement-icon">🎯</div>
+                    <h3>ACM ICPC</h3>
+                    <p>India Finals Qualifier</p>
+                    <span class="achievement-detail">Ranked 22nd at ACM ICPC Asia Kolkata 2016</span>
+                </div>
+                
+                <div class="achievement-card reveal reveal--delay-3">
+                    <div class="achievement-icon">🎓</div>
+                    <h3>IIIT-H Dean's List</h3>
+                    <p>Academic Excellence</p>
+                    <span class="achievement-detail">Monsoon 2018 & Spring 2019</span>
+                </div>
+                
+                <div class="achievement-card reveal reveal--delay-4">
+                    <div class="achievement-icon">👨‍🏫</div>
+                    <h3>Teaching Assistant</h3>
+                    <p>IIIT Hyderabad</p>
+                    <span class="achievement-detail">Statistical Methods in AI • Discrete Maths & Algorithms</span>
+                </div>
+                
+                <div class="achievement-card reveal reveal--delay-5">
+                    <div class="achievement-icon">⭐</div>
+                    <h3>CTO Recognition</h3>
+                    <p>Salesforce</p>
+                    <span class="achievement-detail">Org-wide appreciation for Loyalty App revival</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section" id="contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-content reveal">
+                    <span class="section-tag">06 / Contact</span>
+                    <h2 class="contact-title">
+                        Let's create something <span class="gradient-text">amazing</span> together
+                    </h2>
+                    <p class="contact-desc">
+                        Have a project idea? Want to collaborate? Or just want to say hi? 
+                        I'm always open to discussing new opportunities and interesting projects.
+                    </p>
+                    <a href="mailto:iamshivam26@gmail.com" class="contact-email">
+                        iamshivam26@gmail.com
+                    </a>
+                    <div class="contact-social">
+                        <a href="https://github.com/shivam496" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                        <a href="https://linkedin.com/in/i-am-shivam" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+                        <!-- TODO: Update with your actual X/Twitter handle -->
+                        <a href="https://x.com/your_handle" target="_blank" rel="noopener" class="social-link" aria-label="X (Twitter)">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                            </svg>
+                        </a>
+                        <a href="mailto:iamshivam26@gmail.com" class="social-link" aria-label="Email">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-visual reveal reveal--delay-1">
+                    <div class="contact-card">
+                        <div class="card-pattern"></div>
+                        <div class="card-content">
+                            <span class="card-greeting">👋</span>
+                            <span class="card-text">Let's build the future, one app at a time.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">
+                    Designed & Built with <span class="footer-heart">♥</span> by Shivam Singh
+                </p>
+                <p class="footer-year">© <span id="currentYear">2025</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>
