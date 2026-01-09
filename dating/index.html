@@ -5,13 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Shivam Singh - Your future favorite person. Maybe. Probably. Let's find out? 💫">
     <meta name="robots" content="noindex, nofollow">
-    <title>Shivam, 29 | Swipe Right? 💘</title>
+    
+    <!-- Open Graph for social sharing -->
+    <meta property="og:title" content="Shivam, 29 | Swipe Right?">
+    <meta property="og:description" content="Software Engineer. Chai enthusiast. Looking for someone warm, sharp, and a little unpredictable.">
+    <meta property="og:type" content="profile">
+    <meta property="og:url" content="https://shivam496.github.io/dating/">
+    
+    <title>Shivam, 29 | Swipe Right?</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
     
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💘</text></svg>">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👋</text></svg>">
     
     <style>
         :root {
@@ -215,24 +222,17 @@
             transform: scale(1.05) rotate(2deg);
         }
 
-        .photo-placeholder {
+        .photo-img {
+            position: absolute;
+            inset: 0;
             width: 100%;
             height: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, var(--bg-elevated), var(--bg-card));
-            color: var(--text-muted);
-            gap: 0.5rem;
+            object-fit: cover;
+            transition: transform 0.3s ease;
         }
 
-        .photo-placeholder-icon {
-            font-size: 3rem;
-        }
-
-        .photo-placeholder-text {
-            font-size: 0.8rem;
+        .photo-card:hover .photo-img {
+            transform: scale(1.05);
         }
 
         .photo-caption {
@@ -763,10 +763,6 @@
                 <div class="stat-label">Taurus energy</div>
             </div>
             <div class="stat">
-                <div class="stat-value">📍</div>
-                <div class="stat-label">Hyderabad</div>
-            </div>
-            <div class="stat">
                 <div class="stat-value">🚭</div>
                 <div class="stat-label">No drinks, no smoke</div>
             </div>
@@ -784,24 +780,15 @@
         
         <div class="photos-grid">
             <div class="photo-card clickable">
-                <div class="photo-placeholder">
-                    <span class="photo-placeholder-icon">📷</span>
-                    <span class="photo-placeholder-text">photo-1.jpg</span>
-                </div>
+                <img src="images/photo-1.jpg" alt="Shivam - Photo 1" class="photo-img">
                 <div class="photo-caption">The main character energy shot</div>
             </div>
             <div class="photo-card clickable">
-                <div class="photo-placeholder">
-                    <span class="photo-placeholder-icon">📷</span>
-                    <span class="photo-placeholder-text">photo-2.jpg</span>
-                </div>
+                <img src="images/photo-2.jpg" alt="Shivam - Photo 2" class="photo-img">
                 <div class="photo-caption">Pretending to be candid</div>
             </div>
             <div class="photo-card clickable">
-                <div class="photo-placeholder">
-                    <span class="photo-placeholder-icon">📷</span>
-                    <span class="photo-placeholder-text">photo-3.jpg</span>
-                </div>
+                <img src="images/photo-3.jpg" alt="Shivam - Photo 3" class="photo-img">
                 <div class="photo-caption">The one mom approves of</div>
             </div>
         </div>
@@ -901,17 +888,17 @@
             <div class="review-card">
                 <div class="review-header">
                     <div class="reviewer">
-                        <span class="reviewer-avatar">💻</span>
+                        <span class="reviewer-avatar">👔</span>
                         <div class="reviewer-info">
-                            <span class="reviewer-name">His Code</span>
-                            <span class="reviewer-relation">Professional Relationship</span>
+                            <span class="reviewer-name">The Colleague</span>
+                            <span class="reviewer-relation">Worked together 3+ years</span>
                         </div>
                     </div>
-                    <div class="review-rating">⭐⭐⭐⭐</div>
+                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
                 </div>
                 <p class="review-text">
-                    Writes clean code. Comments his functions. Doesn't push to main on Fridays. 
-                    Treats me better than most humans treat their code. -1 star for too many TODO comments.
+                    The guy everyone wants on their team. Calm under pressure, always has snacks at his desk, 
+                    and somehow makes meetings actually fun. Would trust him with my project deadlines and my Netflix password.
                 </p>
             </div>
         </div>
@@ -1128,8 +1115,6 @@
         
         Either way, you seem cool.
         Maybe we should grab chai sometime? ☕
-        
-        📧 iamshivam26@gmail.com
         `);
 
         // Konami code

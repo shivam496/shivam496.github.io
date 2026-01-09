@@ -461,12 +461,18 @@ body:hover .cursor-glow {
     align-items: center;
 }
 
+.stat-value {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    white-space: nowrap;
+}
+
 .stat-number {
     font-family: var(--font-heading);
     font-size: 2.5rem;
     font-weight: 600;
     color: var(--accent-primary);
-    display: inline;
 }
 
 .stat-suffix {
