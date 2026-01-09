@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shivam Singh - Your future favorite person. Maybe. Probably. Let's find out? 💫">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Shivam, 29 | Swipe Right? 💘</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💘</text></svg>">
+    
+    <style>
+        :root {
+            --bg-dark: #0a0a0f;
+            --bg-card: #141420;
+            --bg-elevated: #1e1e2e;
+            --accent-pink: #ff5e8f;
+            --accent-purple: #b347d9;
+            --accent-orange: #ff8c42;
+            --accent-mint: #3dd9a0;
+            --text-primary: #ffffff;
+            --text-secondary: #a0a0b8;
+            --text-muted: #5a5a72;
+            --gradient-hot: linear-gradient(135deg, #ff5e8f, #ff8c42);
+            --gradient-cool: linear-gradient(135deg, #b347d9, #3dd9a0);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Floating Hearts Background */
+        .hearts-bg {
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            overflow: hidden;
+            opacity: 0.4;
+        }
+
+        .heart {
+            position: absolute;
+            font-size: 1.5rem;
+            animation: floatUp 15s linear infinite;
+            opacity: 0;
+        }
+
+        @keyframes floatUp {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 0.7; }
+            90% { opacity: 0.7; }
+            100% { transform: translateY(-100px) rotate(720deg); opacity: 0; }
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150%;
+            height: 100%;
+            background: radial-gradient(ellipse at center top, rgba(255, 94, 143, 0.15), transparent 60%);
+            z-index: -1;
+        }
+
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(61, 217, 160, 0.15);
+            border: 1px solid rgba(61, 217, 160, 0.3);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            color: var(--accent-mint);
+            margin-bottom: 2rem;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(61, 217, 160, 0.4); }
+            50% { box-shadow: 0 0 0 10px rgba(61, 217, 160, 0); }
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--accent-mint);
+            border-radius: 50%;
+        }
+
+        .hero-title {
+            font-size: clamp(3rem, 10vw, 6rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+        }
+
+        .hero-title span {
+            background: var(--gradient-hot);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-family: 'Caveat', cursive;
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .scroll-hint {
+            position: absolute;
+            bottom: 2rem;
+            animation: bounce 2s ease-in-out infinite;
+            cursor: pointer;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(10px); }
+        }
+
+        /* Photo Gallery */
+        .photos-section {
+            padding: 4rem 1.5rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-family: 'Caveat', cursive;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 0.5rem;
+            color: var(--accent-pink);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            margin-bottom: 3rem;
+            font-size: 1rem;
+        }
+
+        .photos-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+
+        .photo-card {
+            aspect-ratio: 3/4;
+            background: var(--bg-card);
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .photo-card:hover {
+            transform: scale(1.05) rotate(-2deg);
+            z-index: 10;
+        }
+
+        .photo-card:nth-child(2):hover {
+            transform: scale(1.05) rotate(2deg);
+        }
+
+        .photo-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--bg-elevated), var(--bg-card));
+            color: var(--text-muted);
+            gap: 0.5rem;
+        }
+
+        .photo-placeholder-icon {
+            font-size: 3rem;
+        }
+
+        .photo-placeholder-text {
+            font-size: 0.8rem;
+        }
+
+        .photo-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 1.5rem 1rem 1rem;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            font-size: 0.85rem;
+            color: white;
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 4rem 1.5rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .about-card {
+            background: var(--bg-card);
+            border-radius: 24px;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-card::before {
+            content: '"';
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            font-size: 8rem;
+            font-family: Georgia, serif;
+            color: var(--accent-pink);
+            opacity: 0.1;
+        }
+
+        .about-text {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        .about-text strong {
+            color: var(--text-primary);
+        }
+
+        .about-text .highlight {
+            color: var(--accent-pink);
+        }
+
+        .about-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .tag {
+            background: var(--bg-elevated);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+            cursor: default;
+        }
+
+        .tag:hover {
+            background: var(--accent-pink);
+            transform: translateY(-3px);
+        }
+
+        /* Reviews Section */
+        .reviews-section {
+            padding: 4rem 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .reviews-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .review-card {
+            background: var(--bg-card);
+            border-radius: 20px;
+            padding: 1.5rem;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .review-card:hover {
+            transform: translateX(10px);
+        }
+
+        .review-card::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            border-radius: 4px;
+        }
+
+        .review-card:nth-child(1)::before { background: var(--accent-mint); }
+        .review-card:nth-child(2)::before { background: var(--accent-orange); }
+        .review-card:nth-child(3)::before { background: var(--accent-purple); }
+        .review-card:nth-child(4)::before { background: var(--accent-pink); }
+
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+
+        .reviewer {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .reviewer-avatar {
+            font-size: 2rem;
+        }
+
+        .reviewer-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .reviewer-name {
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .reviewer-relation {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .review-rating {
+            display: flex;
+            gap: 2px;
+        }
+
+        .review-text {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            font-style: italic;
+        }
+
+        .review-text::before { content: '"'; }
+        .review-text::after { content: '"'; }
+
+        /* Win Me Over Section */
+        .win-section {
+            padding: 4rem 1.5rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .win-grid {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .win-item {
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 1.25rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            transition: all 0.3s ease;
+            cursor: default;
+        }
+
+        .win-item:hover {
+            background: var(--bg-elevated);
+            transform: scale(1.02);
+        }
+
+        .win-icon {
+            font-size: 1.75rem;
+            flex-shrink: 0;
+        }
+
+        .win-content h4 {
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .win-content p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* First Date Section */
+        .date-section {
+            padding: 4rem 1.5rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .date-card {
+            background: linear-gradient(135deg, rgba(255, 94, 143, 0.1), rgba(179, 71, 217, 0.1));
+            border: 1px solid rgba(255, 94, 143, 0.2);
+            border-radius: 24px;
+            padding: 2.5rem;
+            text-align: center;
+        }
+
+        .date-emoji {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .date-title {
+            font-family: 'Caveat', cursive;
+            font-size: 2rem;
+            color: var(--accent-pink);
+            margin-bottom: 1.5rem;
+        }
+
+        .date-options {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            text-align: left;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .date-option {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1rem 1.25rem;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .date-option:hover {
+            background: rgba(255, 94, 143, 0.2);
+            transform: translateX(10px);
+        }
+
+        .date-option-icon {
+            font-size: 1.5rem;
+        }
+
+        .date-option-text {
+            font-size: 1rem;
+            color: var(--text-secondary);
+        }
+
+        .date-note {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        /* Dealbreakers */
+        .deal-section {
+            padding: 4rem 1.5rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .deal-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .deal-card {
+            background: var(--bg-card);
+            border-radius: 20px;
+            padding: 1.5rem;
+        }
+
+        .deal-card--yes {
+            border: 1px solid rgba(61, 217, 160, 0.3);
+        }
+
+        .deal-card--no {
+            border: 1px solid rgba(255, 94, 143, 0.3);
+        }
+
+        .deal-header {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .deal-card--yes .deal-header { color: var(--accent-mint); }
+        .deal-card--no .deal-header { color: var(--accent-pink); }
+
+        .deal-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .deal-item {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 6rem 1.5rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150%;
+            height: 100%;
+            background: radial-gradient(ellipse at center bottom, rgba(179, 71, 217, 0.15), transparent 60%);
+            z-index: -1;
+        }
+
+        .cta-title {
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .cta-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 2.5rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn--primary {
+            background: var(--gradient-hot);
+            color: white;
+        }
+
+        .btn--primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(255, 94, 143, 0.4);
+        }
+
+        .btn--ghost {
+            background: transparent;
+            border: 2px solid var(--text-muted);
+            color: var(--text-primary);
+        }
+
+        .btn--ghost:hover {
+            border-color: var(--accent-pink);
+            color: var(--accent-pink);
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 3rem 1.5rem;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        .footer a {
+            color: var(--accent-pink);
+            text-decoration: none;
+        }
+
+        /* Dating Me Is Like Section */
+        .promise-section {
+            padding: 4rem 1.5rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .promise-card {
+            background: linear-gradient(135deg, rgba(255, 94, 143, 0.15), rgba(179, 71, 217, 0.15));
+            border: 2px solid rgba(255, 94, 143, 0.3);
+            border-radius: 24px;
+            padding: 2.5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .promise-card::before {
+            content: '💝';
+            position: absolute;
+            top: -30px;
+            right: -30px;
+            font-size: 8rem;
+            opacity: 0.1;
+            transform: rotate(15deg);
+        }
+
+        .promise-title {
+            font-family: 'Caveat', cursive;
+            font-size: 1.8rem;
+            color: var(--accent-pink);
+            margin-bottom: 1.5rem;
+        }
+
+        .promise-text {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
+        .promise-text .highlight {
+            color: var(--accent-pink);
+        }
+
+        .promise-items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .promise-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 0.75rem 1.25rem;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .footer-joke {
+            margin-top: 1rem;
+            font-style: italic;
+            opacity: 0.7;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .photos-grid {
+                grid-template-columns: 1fr;
+                max-width: 280px;
+                margin: 0 auto;
+            }
+
+            .deal-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-stats {
+                gap: 1.5rem;
+            }
+        }
+
+        /* Fun cursor */
+        .clickable {
+            cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>💘</text></svg>") 16 0, auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Floating Hearts Background -->
+    <div class="hearts-bg" id="heartsContainer"></div>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="status-badge">
+            <span class="status-dot"></span>
+            Currently accepting applications
+        </div>
+        
+        <h1 class="hero-title">
+            Hi, I'm <span>Shivam</span> 👋
+        </h1>
+        <p class="hero-subtitle">29 • Hyderabad • Probably overthinking something right now</p>
+        
+        <div class="hero-stats">
+            <div class="stat">
+                <div class="stat-value">5'10"</div>
+                <div class="stat-label">In shoes, maybe more</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">♉</div>
+                <div class="stat-label">Taurus energy</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">📍</div>
+                <div class="stat-label">Hyderabad</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">🚭</div>
+                <div class="stat-label">No drinks, no smoke</div>
+            </div>
+        </div>
+
+        <a href="#photos" class="scroll-hint">
+            <span style="font-size: 2rem;">👇</span>
+        </a>
+    </section>
+
+    <!-- Photos -->
+    <section class="photos-section" id="photos">
+        <h2 class="section-title">The Evidence 📸</h2>
+        <p class="section-subtitle">What you see is what you get</p>
+        
+        <div class="photos-grid">
+            <div class="photo-card clickable">
+                <div class="photo-placeholder">
+                    <span class="photo-placeholder-icon">📷</span>
+                    <span class="photo-placeholder-text">photo-1.jpg</span>
+                </div>
+                <div class="photo-caption">The main character energy shot</div>
+            </div>
+            <div class="photo-card clickable">
+                <div class="photo-placeholder">
+                    <span class="photo-placeholder-icon">📷</span>
+                    <span class="photo-placeholder-text">photo-2.jpg</span>
+                </div>
+                <div class="photo-caption">Pretending to be candid</div>
+            </div>
+            <div class="photo-card clickable">
+                <div class="photo-placeholder">
+                    <span class="photo-placeholder-icon">📷</span>
+                    <span class="photo-placeholder-text">photo-3.jpg</span>
+                </div>
+                <div class="photo-caption">The one mom approves of</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="about-section">
+        <h2 class="section-title">The Pitch 🎤</h2>
+        <p class="section-subtitle">Why you should swipe right (or whatever you do here)</p>
+        
+        <div class="about-card">
+            <p class="about-text">
+                Software Engineer by day, overthinker by night. I build apps and occasionally convince myself 
+                I can keep plants alive (spoiler: I can't).
+                <br><br>
+                I value <strong>clarity, calm, and genuine connection</strong>. I listen, remember the little things, and show up with effort. 
+                Flowers, opened doors, and thoughtful surprises? <strong>Effort and consistency included. No hidden fees.</strong> 💐
+                <br><br>
+                Looking for someone <span class="highlight">warm, sharp, and a little unpredictable</span>. 
+                Empathy, playfulness, and loyalty are the holy trinity.
+                <br><br>
+                <em>Warning: May spontaneously start building an app for literally any problem you mention.</em>
+            </p>
+            
+            <div class="about-tags">
+                <span class="tag">🚗 Long drives at night</span>
+                <span class="tag">☕ Chai & cafe hopping</span>
+                <span class="tag">📚 Reading</span>
+                <span class="tag">🏸 Badminton</span>
+                <span class="tag">🎭 Theater (watching, not acting)</span>
+                <span class="tag">🧘 Meditation</span>
+                <span class="tag">✏️ Sketching</span>
+                <span class="tag">✈️ Travelling</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="reviews-section">
+        <h2 class="section-title">Reviews & Testimonials ⭐</h2>
+        <p class="section-subtitle">Don't just take my word for it</p>
+        
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="reviewer">
+                        <span class="reviewer-avatar">👨</span>
+                        <div class="reviewer-info">
+                            <span class="reviewer-name">The Best Friend</span>
+                            <span class="reviewer-relation">10+ years & counting</span>
+                        </div>
+                    </div>
+                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                </div>
+                <p class="review-text">
+                    Decent human. Replies faster than anyone I know — like genuinely, the man is always online. 
+                    Will help you move apartments at 6 AM without complaining. Best person for late night chai runs and long drives to nowhere. 
+                    10/10 would set you up with him if you're reading this.
+                </p>
+            </div>
+            
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="reviewer">
+                        <span class="reviewer-avatar">👩</span>
+                        <div class="reviewer-info">
+                            <span class="reviewer-name">Anonymous Ex</span>
+                            <span class="reviewer-relation">Dated for 1 year</span>
+                        </div>
+                    </div>
+                    <div class="review-rating">⭐⭐⭐⭐</div>
+                </div>
+                <p class="review-text">
+                    Actually listens. Like, really listens — and remembers. Brought me flowers randomly, opened doors, 
+                    remembered that I mentioned wanting a specific book once and got it months later. Thoughtful to a fault. 
+                    Minus one star because he'll spend 20 mins deciding what to order. Whoever gets him is genuinely lucky.
+                </p>
+            </div>
+            
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="reviewer">
+                        <span class="reviewer-avatar">👩‍🦳</span>
+                        <div class="reviewer-info">
+                            <span class="reviewer-name">Mom</span>
+                            <span class="reviewer-relation">Biological</span>
+                        </div>
+                    </div>
+                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                </div>
+                <p class="review-text">
+                    Best son. Very handsome. Eats properly now. Please someone date him so he stops working on weekends. 
+                    Will make excellent husband material. I may be biased but I'm also correct.
+                </p>
+            </div>
+
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="reviewer">
+                        <span class="reviewer-avatar">💻</span>
+                        <div class="reviewer-info">
+                            <span class="reviewer-name">His Code</span>
+                            <span class="reviewer-relation">Professional Relationship</span>
+                        </div>
+                    </div>
+                    <div class="review-rating">⭐⭐⭐⭐</div>
+                </div>
+                <p class="review-text">
+                    Writes clean code. Comments his functions. Doesn't push to main on Fridays. 
+                    Treats me better than most humans treat their code. -1 star for too many TODO comments.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dating Me Is Like -->
+    <section class="promise-section">
+        <div class="promise-card">
+            <h2 class="promise-title">Dating Me Is Like...</h2>
+            <p class="promise-text">
+                Being <span class="highlight">listened to</span>, <span class="highlight">remembered</span>, 
+                and <span class="highlight">treated well</span>.
+            </p>
+            <div class="promise-items">
+                <div class="promise-item">💬 Good conversations</div>
+                <div class="promise-item">💭 Thoughtful effort</div>
+                <div class="promise-item">💐 Flowers included</div>
+                <div class="promise-item">🚪 Doors opened</div>
+                <div class="promise-item">✨ Surprises happen</div>
+                <div class="promise-item">🔒 No hidden fees</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Win Me Over -->
+    <section class="win-section">
+        <h2 class="section-title">How to Win Me Over 💘</h2>
+        <p class="section-subtitle">The cheat codes to my heart</p>
+        
+        <div class="win-grid">
+            <div class="win-item">
+                <span class="win-icon">🎯</span>
+                <div class="win-content">
+                    <h4>Be direct</h4>
+                    <p>Say what you mean, mean what you say. Clarity is incredibly attractive.</p>
+                </div>
+            </div>
+            <div class="win-item">
+                <span class="win-icon">🔥</span>
+                <div class="win-content">
+                    <h4>Bring warmth</h4>
+                    <p>Genuine warmth and kindness. The kind that makes strangers smile.</p>
+                </div>
+            </div>
+            <div class="win-item">
+                <span class="win-icon">🎲</span>
+                <div class="win-content">
+                    <h4>Keep me guessing</h4>
+                    <p>A little unpredictability is exciting. Surprise me with your thoughts, ideas, or random plans.</p>
+                </div>
+            </div>
+            <div class="win-item">
+                <span class="win-icon">🌙</span>
+                <div class="win-content">
+                    <h4>Be down for late-night talks</h4>
+                    <p>The 2 AM conversations about life, fears, and dreams? That's where the magic is.</p>
+                </div>
+            </div>
+            <div class="win-item">
+                <span class="win-icon">🚗</span>
+                <div class="win-content">
+                    <h4>Be down for spontaneous drives</h4>
+                    <p>The best conversations happen on late-night drives to nowhere in particular.</p>
+                </div>
+            </div>
+            <div class="win-item">
+                <span class="win-icon">💫</span>
+                <div class="win-content">
+                    <h4>Just be yourself</h4>
+                    <p>Seriously. The real you > the "dating version" of you. Always.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Perfect First Date -->
+    <section class="date-section">
+        <h2 class="section-title">Pick Our First Getaway ✈️</h2>
+        <p class="section-subtitle">Choose your own adventure</p>
+        
+        <div class="date-card">
+            <div class="date-emoji">🎲</div>
+            <h3 class="date-title">Select Your Vibe</h3>
+            
+            <div class="date-options">
+                <div class="date-option">
+                    <span class="date-option-icon">🎬</span>
+                    <span class="date-option-text">Movie night in → long drive for ice cream → stargazing</span>
+                </div>
+                <div class="date-option">
+                    <span class="date-option-icon">🏸</span>
+                    <span class="date-option-text">Golf or badminton → street food crawl → late-night drive</span>
+                </div>
+                <div class="date-option">
+                    <span class="date-option-icon">✈️</span>
+                    <span class="date-option-text">A random flight with no plan — just vibes</span>
+                </div>
+                <div class="date-option">
+                    <span class="date-option-icon">☕</span>
+                    <span class="date-option-text">Coffee that turns into dinner that turns into "wait, it's midnight?"</span>
+                </div>
+                <div class="date-option">
+                    <span class="date-option-icon">📚</span>
+                    <span class="date-option-text">Bookstore browsing + café hopping + deep conversations</span>
+                </div>
+            </div>
+            
+            <p class="date-note">
+                <strong>Best way to ask me out:</strong> Be direct, bring good conversation, 
+                and let coffee turn into something more. ☕→✨
+            </p>
+        </div>
+    </section>
+
+    <!-- Dealbreakers -->
+    <section class="deal-section">
+        <h2 class="section-title">The Fine Print 📋</h2>
+        <p class="section-subtitle">Let's save each other some time</p>
+        
+        <div class="deal-grid">
+            <div class="deal-card deal-card--yes">
+                <div class="deal-header">
+                    <span>✅</span> Green Flags
+                </div>
+                <div class="deal-list">
+                    <div class="deal-item">💛 Kind & emotionally aware</div>
+                    <div class="deal-item">🎯 Present (not just physically)</div>
+                    <div class="deal-item">😊 Warm & genuine</div>
+                    <div class="deal-item">🎲 A little unpredictable</div>
+                    <div class="deal-item">💬 Direct communicator</div>
+                    <div class="deal-item">🎭 Playful energy</div>
+                </div>
+            </div>
+            
+            <div class="deal-card deal-card--no">
+                <div class="deal-header">
+                    <span>🚫</span> Deal Breakers
+                </div>
+                <div class="deal-list">
+                    <div class="deal-item">😒 Rude to waiters/drivers</div>
+                    <div class="deal-item">📵 Digital ghost (replies in days)</div>
+                    <div class="deal-item">🚬 Smoker</div>
+                    <div class="deal-item">😤 Always negative</div>
+                    <div class="deal-item">🙄 "I don't like reading"</div>
+                    <div class="deal-item">📸 Only group photos (who are you??)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <h2 class="cta-title">Still here? 👀</h2>
+        <p class="cta-subtitle">
+            That's either a really good sign or you fell asleep scrolling. 
+            Either way, let's find out if we vibe?
+        </p>
+        
+        <div class="cta-buttons">
+            <a href="https://instagram.com/_shivam.si" target="_blank" class="btn btn--primary clickable">
+                💬 Slide into my DMs
+            </a>
+            <a href="../" class="btn btn--ghost">
+                💼 See I'm actually legit
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Made with 💘 and questionable life choices</p>
+        <p class="footer-joke">
+            If this page didn't work, I also accept LinkedIn connection requests 
+            <a href="https://linkedin.com/in/i-am-shivam" target="_blank">(professional stalking encouraged)</a>
+        </p>
+        <br>
+        <small>P.S. — I made an entire website just to find a date. If that's not commitment, I don't know what is.</small>
+    </footer>
+
+    <script>
+        // Create floating hearts
+        const heartsContainer = document.getElementById('heartsContainer');
+        const hearts = ['💕', '💖', '💗', '💘', '💝', '✨', '🌟', '💫'];
+        
+        function createHeart() {
+            const heart = document.createElement('span');
+            heart.className = 'heart';
+            heart.textContent = hearts[Math.floor(Math.random() * hearts.length)];
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = (Math.random() * 10 + 10) + 's';
+            heart.style.animationDelay = Math.random() * 5 + 's';
+            heart.style.fontSize = (Math.random() * 1.5 + 0.8) + 'rem';
+            heartsContainer.appendChild(heart);
+            
+            setTimeout(() => heart.remove(), 20000);
+        }
+
+        // Initial hearts
+        for (let i = 0; i < 15; i++) {
+            setTimeout(createHeart, i * 200);
+        }
+        
+        // Continuous hearts
+        setInterval(createHeart, 2000);
+
+        // Console easter egg
+        console.log(`
+        💘 Hey you, curious one!
+        
+        Since you're checking the console, you're probably:
+        a) A developer (nice!)
+        b) Very thorough (also nice!)
+        c) Lost (scroll up for the actual content)
+        
+        Either way, you seem cool.
+        Maybe we should grab chai sometime? ☕
+        
+        📧 iamshivam26@gmail.com
+        `);
+
+        // Konami code
+        let keys = [];
+        const konami = ['ArrowUp','ArrowUp','ArrowDown','ArrowDown','ArrowLeft','ArrowRight','ArrowLeft','ArrowRight','b','a'];
+        
+        document.addEventListener('keydown', (e) => {
+            keys.push(e.key);
+            keys = keys.slice(-10);
+            if (keys.join('') === konami.join('')) {
+                document.body.style.animation = 'hueRotate 2s linear infinite';
+                alert('🎮 Cheat code activated!\n\nYou just unlocked: My respect.\n\nSeriously though, anyone who knows the Konami code is automatically cool in my book.');
+            }
+        });
+
+        // Add animation
+        const style = document.createElement('style');
+        style.textContent = '@keyframes hueRotate { from { filter: hue-rotate(0deg); } to { filter: hue-rotate(360deg); } }';
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
