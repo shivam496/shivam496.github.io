@@ -959,6 +959,16 @@ body:hover .cursor-glow {
     transform: translateY(-5px);
 }
 
+.project-link {
+    display: contents;
+    text-decoration: none;
+    color: inherit;
+}
+
+.project-card:has(.project-link):hover {
+    cursor: pointer;
+}
+
 .project-card--winner {
     border-color: var(--accent-primary);
     background: linear-gradient(135deg, var(--bg-card) 0%, rgba(212, 165, 116, 0.05) 100%);

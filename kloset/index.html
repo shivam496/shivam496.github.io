@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kloset - Your Digital Wardrobe. Smart wardrobe management app with AI-powered classification, weather-based outfit suggestions, and virtual try-on.">
+    <meta name="keywords" content="Kloset, wardrobe app, digital closet, outfit planner, fashion app, AI fashion, wardrobe organizer">
+    <meta name="author" content="Shivam Singh">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Kloset - Your Digital Wardrobe">
+    <meta property="og:description" content="Smart wardrobe management with AI-powered classification, weather-based suggestions, and virtual try-on.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shivam496.github.io/kloset">
+    <meta property="og:image" content="https://shivam496.github.io/kloset/images/og-image.png">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kloset - Your Digital Wardrobe">
+    <meta name="twitter:description" content="Smart wardrobe management with AI-powered classification, weather-based suggestions, and virtual try-on.">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://shivam496.github.io/kloset">
+    
+    <title>Kloset - Your Digital Wardrobe | Support</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👗</text></svg>">
+    
+    <style>
+        :root {
+            --bg-dark: #0a0a0f;
+            --bg-card: #12121a;
+            --bg-card-hover: #1a1a24;
+            --text-primary: #ffffff;
+            --text-secondary: #a1a1aa;
+            --text-muted: #71717a;
+            --accent-pink: #ff5e8f;
+            --accent-purple: #b347d9;
+            --accent-blue: #3b82f6;
+            --gradient-primary: linear-gradient(135deg, #ff5e8f 0%, #b347d9 50%, #3b82f6 100%);
+            --border-color: rgba(255, 255, 255, 0.08);
+            --glow-pink: rgba(255, 94, 143, 0.3);
+            --glow-purple: rgba(179, 71, 217, 0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 20px 0;
+            background: rgba(10, 10, 15, 0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 600;
+            font-size: 1.25rem;
+        }
+
+        .nav-logo-icon {
+            font-size: 1.75rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .nav-link:hover {
+            color: var(--text-primary);
+        }
+
+        .nav-link--cta {
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 600;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 120px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+        }
+
+        .hero-gradient {
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 30% 20%, var(--glow-pink) 0%, transparent 40%),
+                        radial-gradient(circle at 70% 80%, var(--glow-purple) 0%, transparent 40%);
+            opacity: 0.4;
+            animation: gradientMove 15s ease-in-out infinite;
+        }
+
+        @keyframes gradientMove {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            50% { transform: translate(-5%, 5%) rotate(5deg); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero-icon {
+            font-size: 5rem;
+            margin-bottom: 24px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(3rem, 8vw, 5rem);
+            font-weight: 700;
+            margin-bottom: 16px;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-tagline {
+            font-size: 1.5rem;
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+        }
+
+        .hero-description {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 28px;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn--primary {
+            background: var(--gradient-primary);
+            color: white;
+        }
+
+        .btn--primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 40px var(--glow-pink);
+        }
+
+        .btn--secondary {
+            background: var(--bg-card);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn--secondary:hover {
+            background: var(--bg-card-hover);
+            border-color: var(--accent-pink);
+        }
+
+        /* App Store Badge */
+        .app-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: #000;
+            border: 1px solid #333;
+            border-radius: 12px;
+            padding: 10px 20px;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .app-badge:hover {
+            border-color: #666;
+            transform: translateY(-2px);
+        }
+
+        .app-badge svg {
+            width: 28px;
+            height: 28px;
+            fill: white;
+        }
+
+        .app-badge-text {
+            text-align: left;
+        }
+
+        .app-badge-text span {
+            display: block;
+            color: #999;
+            font-size: 0.7rem;
+        }
+
+        .app-badge-text strong {
+            color: white;
+            font-size: 1.1rem;
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 100px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-tag {
+            display: inline-block;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.875rem;
+            color: var(--accent-pink);
+            margin-bottom: 16px;
+            letter-spacing: 0.1em;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .gradient-text {
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .section-desc {
+            color: var(--text-secondary);
+            font-size: 1.125rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Features Section */
+        .features {
+            background: linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-card) 50%, var(--bg-dark) 100%);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .feature-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 32px;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent-pink);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .feature-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .feature-desc {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Screenshots Section */
+        .screenshots {
+            overflow: hidden;
+        }
+
+        .screenshots-scroll {
+            display: flex;
+            gap: 24px;
+            padding: 20px 0;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+        }
+
+        .screenshots-scroll::-webkit-scrollbar {
+            display: none;
+        }
+
+        .screenshot-item {
+            flex: 0 0 280px;
+            scroll-snap-align: center;
+        }
+
+        .screenshot-frame {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 12px;
+            aspect-ratio: 9/19;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        .screenshot-frame:hover {
+            transform: scale(1.02);
+            border-color: var(--accent-purple);
+        }
+
+        .screenshot-placeholder {
+            color: var(--text-muted);
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .screenshot-placeholder span {
+            font-size: 3rem;
+            display: block;
+            margin-bottom: 12px;
+        }
+
+        /* Support Section */
+        .support {
+            background: linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-card) 100%);
+        }
+
+        .support-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .support-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 40px;
+        }
+
+        .support-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        /* FAQ */
+        .faq-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 16px;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+
+        .faq-answer {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Contact */
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            color: var(--text-secondary);
+        }
+
+        .contact-item a {
+            color: var(--accent-pink);
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-icon {
+            font-size: 1.5rem;
+        }
+
+        /* Privacy Section */
+        .privacy {
+            padding: 80px 0;
+        }
+
+        .privacy-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .privacy-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin-bottom: 24px;
+        }
+
+        .privacy-content h3 {
+            font-size: 1.25rem;
+            margin: 32px 0 16px;
+            color: var(--text-primary);
+        }
+
+        .privacy-content p,
+        .privacy-content li {
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+        }
+
+        .privacy-content ul {
+            list-style: disc;
+            padding-left: 24px;
+            margin-bottom: 16px;
+        }
+
+        .privacy-content a {
+            color: var(--accent-pink);
+            text-decoration: none;
+        }
+
+        .privacy-content a:hover {
+            text-decoration: underline;
+        }
+
+        .last-updated {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            margin-bottom: 32px;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--bg-card);
+            border-top: 1px solid var(--border-color);
+            padding: 40px 0;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--text-primary);
+        }
+
+        .footer-text {
+            color: var(--text-muted);
+            font-size: 0.875rem;
+        }
+
+        .footer-text a {
+            color: var(--accent-pink);
+            text-decoration: none;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding: 100px 0 60px;
+            }
+
+            .hero-icon {
+                font-size: 4rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .section {
+                padding: 60px 0;
+            }
+
+            .support-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .screenshot-item {
+                flex: 0 0 240px;
+            }
+        }
+
+        /* Scroll Reveal Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="nav-logo-icon">👗</span>
+                <span>Kloset</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#support" class="nav-link">Support</a></li>
+                <li><a href="#privacy" class="nav-link">Privacy</a></li>
+                <li><a href="https://shivam496.github.io" class="nav-link nav-link--cta">Portfolio</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <div class="hero-gradient"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-icon">👗</div>
+                <h1 class="hero-title">Kloset</h1>
+                <p class="hero-tagline">Your Digital Wardrobe</p>
+                <p class="hero-description">
+                    Smart wardrobe management with AI-powered clothing classification, 
+                    weather-based outfit suggestions, and virtual try-on capabilities. 
+                    Never wonder "what should I wear?" again.
+                </p>
+                <div class="hero-buttons">
+                    <!-- App Store Badge - Update with actual link when available -->
+                    <a href="#" class="app-badge" id="appStoreLink">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                        </svg>
+                        <div class="app-badge-text">
+                            <span>Download on the</span>
+                            <strong>App Store</strong>
+                        </div>
+                    </a>
+                    <a href="#support" class="btn btn--secondary">
+                        <span>Get Support</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features section" id="features">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">FEATURES</span>
+                <h2 class="section-title">Everything you need to <span class="gradient-text">dress smarter</span></h2>
+                <p class="section-desc">Powerful features that make organizing your wardrobe effortless and fun.</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card reveal">
+                    <div class="feature-icon">🧠</div>
+                    <h3 class="feature-title">AI-Powered Classification</h3>
+                    <p class="feature-desc">
+                        Automatically categorize your clothes by type, color, pattern, and occasion using advanced machine learning.
+                    </p>
+                </div>
+
+                <div class="feature-card reveal">
+                    <div class="feature-icon">🌤️</div>
+                    <h3 class="feature-title">Weather-Based Suggestions</h3>
+                    <p class="feature-desc">
+                        Get outfit recommendations based on current weather conditions and your personal style preferences.
+                    </p>
+                </div>
+
+                <div class="feature-card reveal">
+                    <div class="feature-icon">👔</div>
+                    <h3 class="feature-title">Virtual Try-On</h3>
+                    <p class="feature-desc">
+                        See how different outfit combinations look together before you put them on.
+                    </p>
+                </div>
+
+                <div class="feature-card reveal">
+                    <div class="feature-icon">📸</div>
+                    <h3 class="feature-title">Quick Photo Capture</h3>
+                    <p class="feature-desc">
+                        Easily add new items to your wardrobe with automatic background removal and smart tagging.
+                    </p>
+                </div>
+
+                <div class="feature-card reveal">
+                    <div class="feature-icon">📊</div>
+                    <h3 class="feature-title">Wardrobe Analytics</h3>
+                    <p class="feature-desc">
+                        Track which items you wear most, discover unused pieces, and make smarter shopping decisions.
+                    </p>
+                </div>
+
+                <div class="feature-card reveal">
+                    <div class="feature-icon">🔒</div>
+                    <h3 class="feature-title">Private & Secure</h3>
+                    <p class="feature-desc">
+                        Your wardrobe data stays on your device. We respect your privacy and never share your information.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section class="screenshots section" id="screenshots">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">PREVIEW</span>
+                <h2 class="section-title">See <span class="gradient-text">Kloset</span> in action</h2>
+            </div>
+        </div>
+        <div class="screenshots-scroll">
+            <div style="width: 24px; flex-shrink: 0;"></div>
+            <div class="screenshot-item reveal">
+                <div class="screenshot-frame">
+                    <div class="screenshot-placeholder">
+                        <span>🏠</span>
+                        Home Screen
+                    </div>
+                </div>
+            </div>
+            <div class="screenshot-item reveal">
+                <div class="screenshot-frame">
+                    <div class="screenshot-placeholder">
+                        <span>👕</span>
+                        Wardrobe View
+                    </div>
+                </div>
+            </div>
+            <div class="screenshot-item reveal">
+                <div class="screenshot-frame">
+                    <div class="screenshot-placeholder">
+                        <span>✨</span>
+                        AI Suggestions
+                    </div>
+                </div>
+            </div>
+            <div class="screenshot-item reveal">
+                <div class="screenshot-frame">
+                    <div class="screenshot-placeholder">
+                        <span>📊</span>
+                        Analytics
+                    </div>
+                </div>
+            </div>
+            <div class="screenshot-item reveal">
+                <div class="screenshot-frame">
+                    <div class="screenshot-placeholder">
+                        <span>⚙️</span>
+                        Settings
+                    </div>
+                </div>
+            </div>
+            <div style="width: 24px; flex-shrink: 0;"></div>
+        </div>
+    </section>
+
+    <!-- Support Section -->
+    <section class="support section" id="support">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">SUPPORT</span>
+                <h2 class="section-title">We're here to <span class="gradient-text">help</span></h2>
+                <p class="section-desc">Have questions or need assistance? We've got you covered.</p>
+            </div>
+
+            <div class="support-grid">
+                <!-- FAQ -->
+                <div class="support-card reveal">
+                    <h3><span>❓</span> Frequently Asked Questions</h3>
+                    <div class="faq-list">
+                        <div class="faq-item">
+                            <div class="faq-question">How do I add clothes to my wardrobe?</div>
+                            <div class="faq-answer">Simply tap the + button and take a photo of your clothing item. Our AI will automatically remove the background and categorize it for you.</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">Is my data stored in the cloud?</div>
+                            <div class="faq-answer">All your wardrobe data is stored locally on your device. We prioritize your privacy and don't upload your photos to any external servers.</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">How does weather-based suggestion work?</div>
+                            <div class="faq-answer">Kloset uses your location to get current weather data and suggests outfits appropriate for the temperature and conditions.</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">Can I export my wardrobe data?</div>
+                            <div class="faq-answer">Yes! Go to Settings > Data Management to export your wardrobe data as a backup or transfer to a new device.</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">How do I delete my data?</div>
+                            <div class="faq-answer">You can delete individual items by swiping left, or clear all data from Settings > Data Management > Delete All Data.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact -->
+                <div class="support-card reveal">
+                    <h3><span>📬</span> Contact Us</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <span class="contact-icon">✉️</span>
+                            <div>
+                                <strong>Email Support</strong><br>
+                                <a href="mailto:iamshivam26@gmail.com">iamshivam26@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">⏰</span>
+                            <div>
+                                <strong>Response Time</strong><br>
+                                We typically respond within 24-48 hours
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">💡</span>
+                            <div>
+                                <strong>Feature Requests</strong><br>
+                                Have an idea? We'd love to hear it!<br>
+                                Email us with subject "Feature Request"
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">🐛</span>
+                            <div>
+                                <strong>Bug Reports</strong><br>
+                                Found an issue? Please include:<br>
+                                • Device model & iOS version<br>
+                                • Steps to reproduce the bug<br>
+                                • Screenshots if possible
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Privacy Section -->
+    <section class="privacy section" id="privacy">
+        <div class="container">
+            <div class="privacy-content reveal">
+                <h2>Privacy Policy</h2>
+                <p class="last-updated">Last updated: January 28, 2026</p>
+
+                <h3>Overview</h3>
+                <p>
+                    Kloset ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how we handle information when you use our mobile application.
+                </p>
+
+                <h3>Information We Collect</h3>
+                <p>
+                    <strong>Local Data Only:</strong> Kloset stores all your wardrobe data locally on your device. We do not collect, store, or transmit your personal photos or wardrobe information to external servers.
+                </p>
+                <p>The app may collect:</p>
+                <ul>
+                    <li><strong>Location Data:</strong> Used solely for weather-based outfit suggestions. This data is not stored or shared.</li>
+                    <li><strong>Camera Access:</strong> Required to photograph clothing items. Photos are processed and stored locally on your device only.</li>
+                    <li><strong>Anonymous Analytics:</strong> Basic app usage statistics (crashes, feature usage) to help us improve the app. No personal information is included.</li>
+                </ul>
+
+                <h3>How We Use Your Information</h3>
+                <ul>
+                    <li>Provide weather-appropriate outfit recommendations</li>
+                    <li>Improve app performance and user experience</li>
+                    <li>Fix bugs and technical issues</li>
+                </ul>
+
+                <h3>Data Sharing</h3>
+                <p>
+                    We do not sell, trade, or otherwise transfer your personal information to third parties. Your wardrobe data remains on your device and under your control.
+                </p>
+
+                <h3>Data Security</h3>
+                <p>
+                    Your data is stored securely on your device using iOS's built-in encryption. We recommend keeping your device passcode enabled for additional security.
+                </p>
+
+                <h3>Your Rights</h3>
+                <p>You have the right to:</p>
+                <ul>
+                    <li>Access all your data within the app</li>
+                    <li>Export your data at any time</li>
+                    <li>Delete all your data from the app</li>
+                </ul>
+
+                <h3>Children's Privacy</h3>
+                <p>
+                    Kloset is not intended for children under 13. We do not knowingly collect information from children under 13.
+                </p>
+
+                <h3>Changes to This Policy</h3>
+                <p>
+                    We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy in the app and updating the "Last updated" date.
+                </p>
+
+                <h3>Contact Us</h3>
+                <p>
+                    If you have questions about this Privacy Policy, please contact us at:<br>
+                    <a href="mailto:iamshivam26@gmail.com">iamshivam26@gmail.com</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="#features">Features</a>
+                    <a href="#support">Support</a>
+                    <a href="#privacy">Privacy Policy</a>
+                    <a href="https://shivam496.github.io">Developer Portfolio</a>
+                </div>
+                <p class="footer-text">
+                    Made with ♥ by <a href="https://shivam496.github.io">Shivam Singh</a> | © 2026 Kloset
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll Reveal Animation
+        const revealElements = document.querySelectorAll('.reveal');
+
+        const revealOnScroll = () => {
+            revealElements.forEach(el => {
+                const elementTop = el.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (elementTop < windowHeight - 100) {
+                    el.classList.add('visible');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', revealOnScroll);
+        window.addEventListener('load', revealOnScroll);
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Update copyright year
+        document.querySelector('.footer-text').innerHTML = 
+            document.querySelector('.footer-text').innerHTML.replace('2026', new Date().getFullYear());
+    </script>
+</body>
+</html>
